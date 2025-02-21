@@ -9,8 +9,8 @@ Route::get('/', function () {
 
 Route::get('/', [StudentController::class, 'index']);
 
-Route::get('/register', function () {
-    return view('register');
+Route::get('/add', function () {
+    return view('add_student');
 });
 
-Route::post('/register', [StudentController::class, 'create']);
+Route::post('/add', [StudentController::class, 'create']);

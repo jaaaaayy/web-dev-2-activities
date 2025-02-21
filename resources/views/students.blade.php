@@ -1,8 +1,11 @@
-  @extends('layout')
+@extends('layout')
 
-  @section('title', 'Student list')
+@section('title', 'Student list')
 
-  <table class="table">
+@section('content')
+<div class="container">
+  <h1>Student list</h1>
+  <table class="table border">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -24,3 +27,5 @@
       @endforeach
     </tbody>
   </table>
+</div>
+@endsection
