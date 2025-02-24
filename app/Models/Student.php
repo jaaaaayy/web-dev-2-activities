@@ -14,6 +14,10 @@ class Student extends Model
         'name',
         'age',
         'gender',
+<<<<<<< HEAD
         'address'
+=======
+        'address',
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
     ];
 }

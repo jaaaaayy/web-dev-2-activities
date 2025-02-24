@@ -1056,6 +1056,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v11.43.0",
             "source": {
                 "type": "git",
@@ -1066,6 +1067,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/70760d976486310b11d8e487e873077db069e77a",
                 "reference": "70760d976486310b11d8e487e873077db069e77a",
+=======
+            "version": "v11.44.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "e9a33da34815ac1ed46c7e4c477a775f4592f0a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e9a33da34815ac1ed46c7e4c477a775f4592f0a7",
+                "reference": "e9a33da34815ac1ed46c7e4c477a775f4592f0a7",
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1280,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2025-02-18T15:37:56+00:00"
+=======
+            "time": "2025-02-24T13:08:54+00:00"
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
         },
         {
             "name": "laravel/prompts",
@@ -2111,6 +2128,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "3.8.5",
             "source": {
                 "type": "git",
@@ -2121,6 +2139,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/b1a53a27898639579a67de42e8ced5d5386aa9a4",
                 "reference": "b1a53a27898639579a67de42e8ced5d5386aa9a4",
+=======
+            "version": "3.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CarbonPHP/carbon.git",
+                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
+                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
                 "shasum": ""
             },
             "require": {
@@ -2213,7 +2243,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2025-02-11T16:28:45+00:00"
+=======
+            "time": "2025-02-20T17:33:38+00:00"
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
         },
         {
             "name": "nette/schema",
@@ -7384,6 +7418,7 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
+<<<<<<< HEAD
             "version": "2.0.2",
             "source": {
                 "type": "git",
@@ -7394,6 +7429,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/51087f87dcce2663e1fed4dfd4e56eccd580297e",
                 "reference": "51087f87dcce2663e1fed4dfd4e56eccd580297e",
+=======
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
                 "shasum": ""
             },
             "require": {
@@ -7425,9 +7472,15 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.2"
             },
             "time": "2025-02-17T20:25:51+00:00"
+=======
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.1.0"
+            },
+            "time": "2025-02-19T13:28:12+00:00"
+>>>>>>> d6ec1b1 (Activity 3: Unfinish)
         },
         {
             "name": "phpunit/php-code-coverage",
