@@ -9,12 +9,6 @@
 
     <a href="{{ route('student.index') }}">Go back</a>
     <h1>Update student</h1>
-
-    @if(session('success'))
-      <div class="alert alert-success" role="alert">
-        {{ session('success') }}
-      </div>
-    @endif
     
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>

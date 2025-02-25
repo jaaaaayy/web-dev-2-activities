@@ -7,17 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    /** @use HasFactory<\Database\Factories\StudentFactory> */
-    use HasFactory;
+        /** @use HasFactory<\Database\Factories\StudentFactory> */
+        use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'age',
-        'gender',
-<<<<<<< HEAD
-        'address'
-=======
-        'address',
->>>>>>> d6ec1b1 (Activity 3: Unfinish)
-    ];
+        protected $fillable = [
+                'name',
+                'age',
+                'gender',
+                'address',
+        ];
 }

@@ -18,13 +18,9 @@ class StudentFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'age' => fake()->numberBetween(18, 60),
+            'age' => fake()->numberBetween(18, 22),
             'gender' => fake()->randomElement(['male', 'female']),
-<<<<<<< HEAD
-            'address' => fake()->address()
-=======
             'address' => fake()->address(),
->>>>>>> d6ec1b1 (Activity 3: Unfinish)
         ];
     }
 }

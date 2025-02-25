@@ -4,6 +4,13 @@
 
 @section('content')
   <main class="container">
+    @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ session('success') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+    
     <div class="d-flex justify-content-between align-items-center">
       <h1>Student list</h1>
       <a href="{{ route('student.create') }}" class="btn btn-success">Add student</a>
@@ -29,9 +36,33 @@
               <td>{{ $student->address }}</td> 
               <td>
                 <a href={{ route('student.edit', $student) }} class="btn btn-warning">Edit</a>
-                <button class="btn btn-danger">Delete</button>
-              </td>  
-            </tr>         
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $student->id }}">
+                  Delete
+                </button>
+              </td>
+            </tr>
+            
+            <div class="modal fade" id="deleteModal{{ $student->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete student</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete student {{ $student->name }}?</p>
+                    <form action="{{ route('student.destroy', $student->id) }}" method="POST" class="float-end">
+                      @csrf
+                      @method('DELETE')
+          
+                      <div class="float-end">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submmit" class="btn btn-primary" >Proceed</button></div>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
           @endforeach
       </tbody>
     </table>

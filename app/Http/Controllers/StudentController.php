@@ -10,17 +10,6 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::all();
-<<<<<<< HEAD
-        return view('students', ['students' => $students]);
-    }
-
-    public function create(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string',
-            'age' => 'required|numeric|max:2',
-            'gender' => 'required|string',
-=======
         return view('student.index', ['students' => $students]);
     }
 
@@ -32,25 +21,17 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string',
-            'age' => 'required|numeric|max:60',
+            'age' => 'required|numeric',
             'gender' => 'required|in:male,female',
->>>>>>> d6ec1b1 (Activity 3: Unfinish)
             'address' => 'required|string',
         ]);
 
-        Student::create([
-            'name' => $request->name,
-            'age' => $request->age,
-            'gender' => $request->gender,
-            'address' => $request->address,
-        ]);
+        Student::create($validated);
 
-        return redirect()->back()->with('success', 'Student added successfully!');
+        return redirect()->route('student.index')->with('success', 'Student added successfully!');
     }
-<<<<<<< HEAD
-=======
 
     public function edit(Student $student)
     {
@@ -61,14 +42,20 @@ class StudentController extends Controller
     {
         $validated = $request->validate([
             'name' => 'required|string',
-            'age' => 'required|numeric|max:60',
+            'age' => 'required|numeric',
             'gender' => 'required|in:male,female',
             'address' => 'required|string',
         ]);
 
         $student->update($validated);
 
-        return redirect()->back()->with('success', 'Student updated successfully!');
+        return redirect()->route('student.index')->with('success', 'Student updated successfully!');
     }
->>>>>>> d6ec1b1 (Activity 3: Unfinish)
+
+    public function destroy(Student $student)
+    {
+        $student->delete();
+
+        return redirect()->back()->with('success', 'Student deleted successfully!');
+    }
 }
