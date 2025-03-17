@@ -14,7 +14,7 @@
   <nav class="navbar bg-body-tertiary">
     <div class="container">
       <span class="navbar-brand mb-0 h1">Web Dev 2</span>
-      @if (Auth::user())
+      @if (Session::has('user'))
         <a href="{{ route('auth.logout') }}" class="btn btn-danger">Logout</a>
       @endif
     </div>

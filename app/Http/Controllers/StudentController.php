@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -31,7 +30,7 @@ class StudentController extends Controller
 
         Student::create($validated);
 
-        return redirect()->route('student.index')->with('success', 'Student added successfully!');
+        return redirect()->route('students.index')->with('success', 'Student added successfully!');
     }
 
     public function edit(Student $student)
@@ -50,7 +49,7 @@ class StudentController extends Controller
 
         $student->update($validated);
 
-        return redirect()->route('student.index')->with('success', 'Student updated successfully!');
+        return redirect()->route('students.index')->with('success', 'Student updated successfully!');
     }
 
     public function destroy(Student $student)

@@ -3,13 +3,13 @@
 @section('title', 'Create student')
 
 @section('content')
-  <form action="{{ route('student.store') }}" method="POST" class="container">
+  <form action="{{ route('students.store') }}" method="POST" class="container">
     @csrf
     @method('POST')
 
-    <a href="{{ route('student.index') }}">Go back</a>
+    <a href="{{ route('students.index') }}">Go back</a>
     <h1>Add student</h1>
-    
+
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
