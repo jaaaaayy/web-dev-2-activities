@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\StudentResource;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -57,5 +58,11 @@ class StudentController extends Controller
         $student->delete();
 
         return redirect()->back()->with('success', 'Student deleted successfully!');
+    }
+
+    public function students(Request $request)
+    {
+        $students = Student::all();
+        return StudentResource::collection($students);
     }
 }

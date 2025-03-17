@@ -25,3 +25,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('students/{student}', 'destroy')->name('students.destroy');
   });
 });
+
+require __DIR__ . '/api.php';
